@@ -1,0 +1,2 @@
+# lynzi-js
+Class practice
