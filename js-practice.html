@@ -8,6 +8,7 @@
 </head>
 <body>
   <script>
+    // Practicing math
     console.log("Let's do math:");
 
     let x = 5;
@@ -36,6 +37,7 @@
     var fullName = firstName + " " + middleName + " " + lastName;
     console.log(fullName);
 
+    // Practicing functions
     console.log("Using functions:");
 
     // Multiplies the number by the same number
@@ -51,6 +53,55 @@
     console.log(try02);
     
     console.log(makeSquare(21));
+
+    // Make a full name
+    function name(first, middle, last) {
+      var full = first + " " + middle + " " + last;
+      return full;
+    }
+
+    var name01 = name("Robert",'"Beto"',"O'Rourke");
+    console.log(name01);
+
+    var name02 = name("Lynzi","Elizabeth","Rojas");
+    console.log(name02);
+
+    console.log(name("Paige","Francis","Nelson"));
+
+    console.log("Making better functions:");
+
+    // Make a full name with a middle initial
+    function betterName(name1, name2, name3) {
+      if (name2.length === 1) {
+        name2 = name2 + ".";
+        var wholeName = name1 + " " + name2 + " " + name3;
+        return wholeName;
+    } else {
+        var wholeName = name1 + " " + name2 + " " + name3;
+        return wholeName;
+    }
+    }
+    
+    console.log(betterName("Lynzi","Elizabeth","Rojas"));
+
+    console.log(betterName("Donald","F","Trump"));
+
+    // Practicing flows
+    function scores(home, away) {
+      if (home > away) {
+        return "The home team won";
+    } else if (home < away) {
+        return "The away team won";
+    } else {
+        return "The teams tied";
+    } 
+    }
+
+    console.log(scores(3,2));
+
+    console.log(scores(3,4));
+
+    console.log(scores(1,1));
   </script>
 </body>
 </html>
