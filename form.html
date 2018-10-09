@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+  <form id="nameForm">
+    <p>First name: <input type="text" name="first" value="Aragorn"></p>
+    <p>Middle name: <input type="text" name="middle" value="Elessar"></p>
+    <p>Last name: <input type="text" name="last" value="Telcontar"></p>
+    <input type="button" value="Make name" onclick = "betterName()"> 
+  </form> 
+  <h3 id="name">Name will go here</h3>
+
+  <script>
+    function betterName() {
+      let name1 = document.getElementById("nameForm").first.value;
+      let name2 = document.getElementById("nameForm").middle.value;
+      let name3 = document.getElementById("nameForm").last.value;
+      if (name2.length === 1) {
+        name2 = name2 + ".";
+        var wholeName = name1 + " " + name2 + " " + name3;
+        document.getElementById("name").innerHTML = wholeName;
+    } else {
+        var wholeName = name1 + " " + name2 + " " + name3;
+        document.getElementById("name").innerHTML = wholeName;
+    }
+    }
+  </script>
+</body>
+</html>
